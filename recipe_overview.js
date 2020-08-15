@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(handleRecipeOverviewData)
     
     function handleRecipeOverviewData(recipeOverview){
-        // console.log(recipeOverview)
         recipeOverview.recipes.map(recipe => {
             renderRecipeCard(recipe)
             splitIngredientData(recipe)
@@ -18,10 +17,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     function splitIngredientData(recipe){
         const splitIngredients = recipe.ingredients.split(";")
-        // console.log(recipe.ingredients.split(";"))
         splitIngredients.map(ingredient => {
             renderIngredients(ingredient)
-            // ingredientElement.className.add("add-ingredient")  
         })
     }
     
@@ -65,26 +62,5 @@ document.addEventListener('DOMContentLoaded', () => {
         event.preventDefault()
         groceryList.appendChild(groceryItem)
     }
-    
-    
-    
-    
-    
-    
-    // function renderIngredient(flavorStyle, ingrdientID){
-        //     console.log("flavorStyle", flavorStlye)
-        //     console.log(ingrdientID)
-        //     const newIngredient = document.createElement("li")
-        //     newIngredient.className.add("ingredients")
-        //     newIngredient.textContent = flavorStyle
-        //     newIngredient.id = ingrdientID
-        
-        // }
-        
-        
-        
-        // function createIngredientBTN(){
-            
-            // }
             
         })

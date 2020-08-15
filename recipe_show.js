@@ -10,8 +10,4 @@ document.addEventListener('DOMContentLoaded', () => {
     .then(recipeObject => {
         console.table(recipeObject)
     })
-
-    // function handleRecipeObjectData(recipeObject){
-    //     console.table(recipeObject) 
-    // }
 })
