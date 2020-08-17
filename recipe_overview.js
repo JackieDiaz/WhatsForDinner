@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const searchParams = new URLSearchParams(document.location.search)
     const query = searchParams.get("id")
-    const baseURL = `http://localhost:4000/whats_for_dinner_bots/${query}`
+    const baseURL = `http://localhost:4000/recipes/${query}`
 
     fetch(baseURL)
     .then(response => response.json())
@@ -27,10 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const recipeCard = document.createElement("main")
         recipeCard.innerHTML = `
         <div class="card">
-        <br><h1>Title: ${recipe.name}</h1><br>
-        <p>Cook time: ${recipe.cook_time} hours/minutes</p>
-        <img src=${recipe.image}>
-        <br><p>Instructions ${recipe.instructions}</p><br>
+            <br><h1>Title: ${recipe.name}</h1><br>
+            <p>Cook time: ${recipe.cook_time} hours/minutes</p>
+            <img src=${recipe.image}>
+            <br><p>Instructions ${recipe.instructions}</p><br>
         </div>
         `
         recipeCardContainer.appendChild(recipeCard)   
@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const ingredientsContainer = document.querySelector(".ingredients-container")
         const ingredientElement = document.createElement("li")
         ingredientElement.textContent = ingredient
-        console.log(ingredientElement)
+        // console.log(ingredientElement)
         ingredientsContainer.appendChild(ingredientElement)
         createAddIngredientBtn(ingredientElement, ingredient)
     

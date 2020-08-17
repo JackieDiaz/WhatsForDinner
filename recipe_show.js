@@ -8,6 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(recipeURL)
     .then(response => response.json())
     .then(recipeObject => {
-        console.table(recipeObject)
+        // console.table(recipeObject)
     })
 })

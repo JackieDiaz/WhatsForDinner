@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const baseURL = "http://localhost:4000/whats_for_dinner_bots"
+    const baseURL = "http://localhost:4000/recipes"
     fetch(baseURL)
     .then(response => response.json())
     .then(handleDinnerObjectData)
@@ -9,9 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
         console.table(dinnerObject)
         dinnerObject.forEach(recipeOverview => {
             renderRecipeOverviewCard(recipeOverview)
-            recipeOverview.recipes.forEach(recipe => {
-                console.log("RECIPE:", recipe)
-            })
+            
         })
     }
 
@@ -44,13 +42,14 @@ document.addEventListener('DOMContentLoaded', () => {
     })
     
     function renderRecipeOverviewCard(recipeOverview){
+        console.log(recipeOverview)
         const recipeCard = document.createElement("h3")
         recipeCard.innerHTML = 
         `
             <div class="card">
-                <br><a class="card-title"href='recipe_overview.html?id=${recipeOverview.id}'>${recipeOverview.name}</a><br>
-                <br><p>time to cook: hours/minutes ${recipeOverview.total_cook_time}</p><br> 
-                <br><p>difficulty level: ${recipeOverview.difficulty}</p><br>   
+                <br><a class="card-title" href='recipeOverview.html?id=${recipeOverview.id}'>${recipeOverview.name}</a><br>
+                <br><p>time to cook: hours/minutes ${recipeOverview.cook_time}</p><br> 
+                <br><img ${recipeOverview.image}/><br> 
             </div>
         `
         recipeCardContainer.appendChild(recipeCard)
