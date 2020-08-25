@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const ingredientsContainer = document.querySelector(".ingredients-container")
         const ingredientElement = document.createElement("li")
         ingredientElement.textContent = ingredient
-        // console.log(ingredientElement)
         ingredientsContainer.appendChild(ingredientElement)
         createAddIngredientBtn(ingredientElement, ingredient)
     
@@ -64,3 +63,54 @@ document.addEventListener('DOMContentLoaded', () => {
     }
             
         })
+
+        // const word = 'pneumonoultramicroscopicsilicovolcanoconiosis'
+
+// function getObjFromStr(word){
+// 	const wordObj = {};
+// 	// take in each character from word and assign the key to be the char
+// 	// value will be the number of times the char occured
+// 	// break word into array then iterate through array
+// 	// forEach 
+
+// 	word.split('').forEach(char => {
+		
+// 	})
+// }
+
+// const buttonComponent = () => {
+	
+// 	increment = () => {
+// 		const num = 0
+// 		return num++
+// 	}
+
+// 	return(
+
+// 	<div>
+// 		<button onCLick>
+			
+// 		</button>
+
+// 	</div>
+
+// 	)
+// }
+
+
+// console.log(getObjFromStr(word))
+
+// /*
+// {
+// 	p: 2,
+// 	n: 4,
+// 	e: 1,
+// 	...
+// }
+
+// wordObj["p"] // 2
+// */
+
+// strong fundamentals
+// explain code clearly
+// 
